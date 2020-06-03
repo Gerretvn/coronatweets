@@ -15,7 +15,7 @@ save_as_csv(TeamKenFM_Tweets, "TeamKenFM_Tweets_03-06-2020.csv")
 # Create new dataframe with cols created_at=Date and text=Text 
 TeamKenFM_Tweets2 <- data.frame("Date"= TeamKenFM_Tweets$created_at, "Text"= TeamKenFM_Tweets$text)
 
-# Shorten dates and coverse to date
+# Shorten dates and converse to date
 TeamKenFM_Tweets2$Date <- substr(TeamKenFM_Tweets2$Date,start=1, stop=10)
 TeamKenFM_Tweets2$Date <- as.Date(TeamKenFM_Tweets2$Date, '%Y-%m-%d')
 
